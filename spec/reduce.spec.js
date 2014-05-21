@@ -8,14 +8,14 @@ describe('reduce', function() {
   });
 
   it('can sum numbers', function() {
-    expect(reduce([1,2,3], function(e) { e + e})).toEqual(6);
+    expect(reduce([1,2,3], 1, function(e) { e + e})).toEqual(7);
   });
 
   it('can some other numbers', function() {
-    expect(reduce([2,2,3,6], function(e) { e + e})).toEqual(13);
+    expect(reduce([2,2,3,6], 0, function(e) { e + e})).toEqual(13);
   });
 
   it('can multiply numbers', function() {
-    expect(reduce([2,2,3], function(e) { e * e})).toEqual(12);
+    expect(reduce([2,2,3], 0, function(e) { e * e})).toEqual(12);
   });
 });
